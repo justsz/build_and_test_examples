@@ -4,4 +4,8 @@ python:
         - "2.7"
 
 script:
-        - python hello.py
+        - nosetests -v --with-coverage
+
+before_install:
+        - pip install coverage
+        - cd python
